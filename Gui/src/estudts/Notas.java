@@ -89,7 +89,7 @@ public class Notas extends estudiante{
               
                 // Leer una linea del archivo
                 String linea = bufferLectura.readLine();
-                
+                linea = bufferLectura.readLine();
                 while (linea != null) {
                     Notas Erick=new Notas(); 
                     // Sepapar la linea leída con el separador definido previamente

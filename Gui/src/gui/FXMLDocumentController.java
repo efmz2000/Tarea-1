@@ -55,25 +55,27 @@ public class FXMLDocumentController implements Initializable {
     
     
    
-    public void ver(){
-        String dir="C:\\Users\\Erick\\Desktop\\datos II\\Prueba_lista.csv";
+    public void cargarArchivo(){
+        String dir="C:\\Users\\Erick\\Desktop\\datos II\\Data.csv";
         ArrayList <Notas> listaEst=(read(dir));
         
         int largo=listaEst.size();
         for (int a=0; a<largo;a++){            
             Notas est = listaEst.get(a);
             Estudiantes.add(est);           
-        } 
+        }    
         
+    }
+    public void cargarLista(){
         
-        //tablaEstudiantes.setItems(Estudiantes);
+    
     }
 
     
-@Override
+    @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        ver();
+        cargarArchivo();
         
         colCarne.setCellValueFactory(e->e.getValue().getCarnet());
         colNombre.setCellValueFactory(e->e.getValue().getNombre());
