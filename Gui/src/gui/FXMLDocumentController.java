@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package gui;
 
 import estudts.Notas;
@@ -22,7 +17,7 @@ import javafx.scene.control.TextField;
 
 
 /**
- *
+ * Clase para la Interfaz gráfica
  * @author Erick
  */
 public class FXMLDocumentController implements Initializable {
@@ -55,7 +50,7 @@ public class FXMLDocumentController implements Initializable {
     
     
    
-    public void cargarArchivo(){
+    private void cargarArchivo(){
         String dir="C:\\Users\\Erick\\Desktop\\datos II\\Data.csv";
         ArrayList <Notas> listaEst=(read(dir));
         
@@ -66,12 +61,11 @@ public class FXMLDocumentController implements Initializable {
         }    
         
     }
-    public void cargarLista(){
-        
-    
-    }
-
-    
+    /**
+     * Método que inicia la tabla
+     * @param url 
+     * @param rb 
+     */ 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
